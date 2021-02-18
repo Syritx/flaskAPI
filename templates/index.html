@@ -1,0 +1,34 @@
+<html>
+    <body>
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap');
+            html {
+                font-family: 'Montserrat';
+            }
+            
+            .btn {
+                background-image: linear-gradient(to bottom, rgb(33, 62, 124), rgb(25, 46, 91));
+            }
+
+            .btn:hover {
+                background-image: linear-gradient(to bottom, rgb(29, 54, 108), rgb(20, 39, 75));
+                cursor: pointer;
+            }
+        </style>
+
+        <p> {{ part_active }} </p>
+
+        <form action="/button/" method="post">
+            <button name="toggle" type="submit" class="btn" style="width: 100px; height: 30px; background-color: rgb(33, 62, 124);
+                border: 0px; color: white; border-radius: 4px; ">Toggle Part</button>
+        </form>
+        
+        <p style="font-weight: 600;">Logs</p>
+
+        {% for x in content %}
+        <p style="margin: 2px; margin-left: 12px;">{{ x }}</p>
+        {% endfor %}
+    </body>
+
+</html>
